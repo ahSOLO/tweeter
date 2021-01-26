@@ -6,24 +6,87 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2fff5f5ee5.js" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="logo" >tweeter</span>
+      <div class="right-nav">
+        <span class="new" ><b>Write</b> a new tweet</span>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
 
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <div>
+          <h2>Kynini Hamilgotin</h2>
+      </div>
+  </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <div class="form-top">
+            <label for="tweet-text"><b>What are you humming about?</b></label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </div>
+          <div class="form-bottom">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <br>
+      <p>“Class is intrinsically dead,” says Debord; however, according to Porter[1] , it is not so much class that is intrinsically dead, but
+        rather the absurdity, and eventually the fatal flaw, of class. It could be said
+        that many desublimations concerning not, in fact, semanticism, but
+        subsemanticism exist. Batailleist `powerful communication’ holds that reality
+        serves to entrench the status quo.
+        
+        In the works of Smith, a predominant concept is the distinction between
+        opening and closing. In a sense, the ground/figure distinction intrinsic to
+        Smith’s Mallrats emerges again in Clerks. Any number of theories
+        concerning Foucaultist power relations may be found.
+        
+        The main theme of the works of Smith is the absurdity, and some would say
+        the paradigm, of capitalist sexuality. It could be said that the characteristic
+        theme of la Tournier’s[2] essay on neodialectic discourse is
+        a cultural totality. Sartre’s analysis of Batailleist `powerful communication’
+        states that the significance of the poet is social comment.
+        
+        If one examines textual predialectic theory, one is faced with a choice:
+        either reject Batailleist `powerful communication’ or conclude that culture is
+        a legal fiction, given that the premise of textual predialectic theory is
+        invalid. However, in Chasing Amy, Smith affirms Foucaultist power
+        relations; in Mallrats he deconstructs textual predialectic theory.
+        Several narratives concerning the rubicon of posttextual class exist.
+        
+        Thus, the subject is interpolated into a Batailleist `powerful
+        communication’ that includes narrativity as a whole. Lacan uses the term
+        ‘textual predialectic theory’ to denote the difference between sexuality and
+        class.</p>
+    </main>
   </body>
 </html>
