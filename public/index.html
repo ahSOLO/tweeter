@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,14 +35,15 @@
       </div>
     </nav>
 
-    <header>
+    <!-- Main Header -->
+    <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <div>
           <h2>Kynini Hamilgotin</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -59,34 +61,29 @@
         </form>
       </section>
       <br>
-      <p>“Class is intrinsically dead,” says Debord; however, according to Porter[1] , it is not so much class that is intrinsically dead, but
-        rather the absurdity, and eventually the fatal flaw, of class. It could be said
-        that many desublimations concerning not, in fact, semanticism, but
-        subsemanticism exist. Batailleist `powerful communication’ holds that reality
-        serves to entrench the status quo.
-        
-        In the works of Smith, a predominant concept is the distinction between
-        opening and closing. In a sense, the ground/figure distinction intrinsic to
-        Smith’s Mallrats emerges again in Clerks. Any number of theories
-        concerning Foucaultist power relations may be found.
-        
-        The main theme of the works of Smith is the absurdity, and some would say
-        the paradigm, of capitalist sexuality. It could be said that the characteristic
-        theme of la Tournier’s[2] essay on neodialectic discourse is
-        a cultural totality. Sartre’s analysis of Batailleist `powerful communication’
-        states that the significance of the poet is social comment.
-        
-        If one examines textual predialectic theory, one is faced with a choice:
-        either reject Batailleist `powerful communication’ or conclude that culture is
-        a legal fiction, given that the premise of textual predialectic theory is
-        invalid. However, in Chasing Amy, Smith affirms Foucaultist power
-        relations; in Mallrats he deconstructs textual predialectic theory.
-        Several narratives concerning the rubicon of posttextual class exist.
-        
-        Thus, the subject is interpolated into a Batailleist `powerful
-        communication’ that includes narrativity as a whole. Lacan uses the term
-        ‘textual predialectic theory’ to denote the difference between sexuality and
-        class.</p>
+      <section class="tweets">
+        <article class="tweet">
+          <header>
+            <div class="left">
+              <img src="https://i.imgur.com/73hZDYK.png" class="avatar">
+              <span class="username">Username Username</span>
+            </div>
+            <span class="handle">@handle</span>
+          </header>
+          <p>
+            <b>Hello World!</b>
+          </p>
+          <footer>
+            <span class="post-time">10 days ago</span>
+            <div class="right">
+              <i class="flag fab fa-font-awesome-flag"></i>
+              <i class="retweet fas fa-retweet"></i>
+              <i class="like fas fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+      <br>
     </main>
   </body>
 </html>
