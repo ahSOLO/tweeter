@@ -61,11 +61,7 @@ const renderTweets = function (tweets) {
   });
 }
 
-$(function() {
-  renderTweets(data);
-});
-
-// AJAX Post Request
+// Save a Tweet - AJAX Post Request
 
 $(function() {
   $('#tweet-button').on('click', function(event) {
@@ -79,4 +75,20 @@ $(function() {
       console.log("Saving Tweet!");
     });
   });
+});
+
+// Load Tweets - AJAX Get Request
+
+const loadTweets = function () {
+  $.ajax({
+    method: 'GET',
+    url: '/tweets'
+  })
+  .then(function (data) {
+    renderTweets(data);
+  });
+}
+
+$(function() {
+  loadTweets();
 });
