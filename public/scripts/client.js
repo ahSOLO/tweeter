@@ -63,9 +63,23 @@ const renderTweets = function (tweets) {
 
 // Save a Tweet - AJAX Post Request
 
+const validateTweet = function (text) {
+  if (text) {
+    if (text.length <= 140) {
+      return true;
+    }
+    return false;
+  } 
+  return null;
+};
+
 $(function() {
   $('#tweet-button').on('click', function(event) {
     event.preventDefault();
+    let tweetText = $("#tweet-text").val();
+    let validation = validateTweet(tweetText);
+    if (validation === null) return alert("Your tweet is not present!");
+    if (validation === false) return alert("Your tweet is too long!");
     $.ajax({
       method: 'POST',
       url: '/tweets',
