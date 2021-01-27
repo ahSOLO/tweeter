@@ -10,6 +10,7 @@ article.tweet {
   align-items: stretch;
   padding: 15px;
   border: 2px solid black;
+  margin-bottom: 20px;
 }
 
 article.tweet:hover {
@@ -39,7 +40,7 @@ article.tweet header .left span {
   margin-left: 10px;
 }
 
-article.tweet header .handle{
+article.tweet header .handle {
   color: transparent;  
 }
 
