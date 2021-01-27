@@ -36,6 +36,10 @@ article.tweet header .left {
   align-items: center;
 }
 
+article.tweet header .left .avatar {
+  max-width: 100px;
+}
+
 article.tweet header .left span {
   margin-left: 10px;
 }

@@ -9,29 +9,28 @@ const data = [
   {
     "user": {
       "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
+      "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle": "@SirIsaac"
     },
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1461116232227
+    "created_at": 1611541589199
   },
   {
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1461113959088
+    "created_at": 1611627989199
   }
 ]
 
-// Return the HTML for a tweet article, given the object
-
+// Take a tweet object and return a jQuery object holding the tweet HTML
 const createTweetElement = function (tweet) {
   return $(`<article class="tweet">
   <header>
@@ -57,12 +56,27 @@ const createTweetElement = function (tweet) {
 
 const renderTweets = function (tweets) {
   tweets.forEach((tweet) => {
-    let renderedTweet = createTweetElement(tweet);
-    $(".tweets").prepend(renderedTweet);
+    let $renderedTweet = createTweetElement(tweet);
+    $(".tweets").prepend($renderedTweet);
   });
 }
 
-
 $(function() {
   renderTweets(data);
+});
+
+// AJAX Post Request
+
+$(function() {
+  $('#tweet-button').on('click', function(event) {
+    event.preventDefault();
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: {text: $("#tweet-text").val()},
+    })
+    .then(function () {
+      console.log("Saving Tweet!");
+    });
+  });
 });
