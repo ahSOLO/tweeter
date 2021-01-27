@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1611541589199
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1611627989199
-  }
-]
-
 // Take a tweet object and return a jQuery object holding the tweet HTML
 const createTweetElement = function (tweet) {
   return $(`<article class="tweet">
@@ -77,16 +51,17 @@ $(function() {
   $('#tweet-button').on('click', function(event) {
     event.preventDefault();
     let tweetText = $("#tweet-text").val();
+    tweetText = $("#tweet-text").text(tweetText).html();
     let validation = validateTweet(tweetText);
     if (validation === null) return alert("Your tweet is not present!");
     if (validation === false) return alert("Your tweet is too long!");
     $.ajax({
       method: 'POST',
       url: '/tweets',
-      data: {text: $("#tweet-text").val()},
+      data: {text: tweetText},
     })
-    .then(function () {
-      console.log("Saving Tweet!");
+    .then(function (tweet) {
+      renderTweets(tweet);
     });
   });
 });

@@ -11,6 +11,7 @@ module.exports = function makeDataHelpers(db) {
     saveTweet: function(newTweet, callback) {
       simulateDelay(() => {
         db.tweets.push(newTweet);
+        // Sends the updated tweets database back via callback once the save is complete
         callback(null, true);
       });
     },
