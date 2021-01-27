@@ -19,7 +19,7 @@ const createTweetElement = function (tweet) {
       <b>${tweet.content.text}</b>
     </p>
     <footer>
-      <span class="post-time">${Math.floor((Date.now() - tweet.created_at)/(1000 * 60 * 60 * 24))} days ago</span>
+      <time class="timeago" datetime="${new Date(tweet.created_at).toISOString()}"></time>
       <div class="right">
         <i class="flag fab fa-font-awesome-flag"></i>
         <i class="retweet fas fa-retweet"></i>
@@ -67,9 +67,12 @@ const postTweet = function (tweetText) {
   })
   .then(function (tweet) {
     renderTweets(tweet);
+    // Calculate timeago
+    $("time.timeago").timeago();
   });
 };
 
+// Register click event handler on tweet button
 $(function() {
   $('#tweet-button').on('click', function(event) {
     event.preventDefault();
@@ -89,11 +92,17 @@ const loadTweets = function () {
   })
   .then(function (data) {
     renderTweets(data);
+    // Calculate timeago
+    $("time.timeago").timeago();
   });
 }
 
 $(function() {
-  // Hide error bar on load
-  $("section.sliding").hide();
   loadTweets();
 });
+
+// Misc
+$(() => {
+  // Hide error bar on load
+  $("section.sliding").hide();
+})
