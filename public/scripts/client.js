@@ -67,6 +67,7 @@ const postTweet = function (tweetText) {
   })
   .then(function (tweet) {
     renderTweets(tweet);
+    $('#tweet-text').val('');
     // Calculate timeago
     $("time.timeago").timeago();
   });
