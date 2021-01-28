@@ -119,9 +119,33 @@ $(() => {
   });
 });
 
+// To-top Arrow
+
+const topScroll = function() {
+  if ($(window).scrollTop() > 200) {
+    $("div.to-top")
+    .show(300)
+    .on("click", function() {
+      $(document).off("scroll");
+      $("html, body").stop(true, false).animate({ scrollTop: "0" }, 300, () => {
+        $("div.to-top").hide(300);
+        $(document).scroll(topScroll);
+      });
+    });
+  }
+};
+
+$(() => {
+  $(document).scroll( function() {
+    topScroll();
+  });
+});
+
+
 // Misc
 $(() => {
-  // Hide error bar and new-tweet section on load
+  // Hide error bar, new-tweet section and to-top arrow on load
   $("section.sliding").hide();
   $("section.new-tweet").hide();
+  $("div.to-top").hide();
 })
