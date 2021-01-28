@@ -31,3 +31,11 @@
   background-color: #4056a1;
   color: #ffffff;
 }
+
+.counterOverLimit {
+  color: red;
+}
+
+.counterUnderLimit {
+  color: #545149
+}

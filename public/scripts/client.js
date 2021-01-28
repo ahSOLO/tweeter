@@ -101,8 +101,26 @@ $(function() {
   loadTweets();
 });
 
+// Navbar Form Toggle
+$(() => {  
+  // Animate arrows in nav on hover
+  $("nav .right-nav")
+  .on("mouseenter", function(e) {
+    $(this).children("i").addClass("bounce")
+  })
+  .on("mouseleave", function(e) {
+    $(this).children("i").removeClass("bounce")
+  })
+  // Click handler
+  .on("click", function(e) {
+    $("section.new-tweet").slideToggle(400)
+      .find("#tweet-text").focus();
+  });
+});
+
 // Misc
 $(() => {
-  // Hide error bar on load
+  // Hide error bar and new-tweet section on load
   $("section.sliding").hide();
+  $("section.new-tweet").hide();
 })

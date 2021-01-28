@@ -40,7 +40,7 @@ article.tweet header .left .avatar {
   max-width: 100px;
 }
 
-article.tweet header .left time {
+article.tweet header .left span {
   margin-left: 10px;
 }
 
