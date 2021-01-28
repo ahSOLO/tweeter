@@ -29,10 +29,6 @@ nav .right-nav:hover {
   cursor: pointer;
 }
 
-nav i {
-  color: red;
-}
-
 @keyframes MoveUpDown {
   0%, 100% {
     transform: translateY(0);
@@ -41,6 +37,11 @@ nav i {
     transform: translateY(10px);
   }
 }
+
+nav i {
+  color: red;
+  animation: MoveUpDown 2s linear infinite;
+}  
 
 .bounce {
   animation: MoveUpDown 1s linear infinite;
