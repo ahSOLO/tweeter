@@ -49,7 +49,7 @@ nav i {
 
 /* Mobile Styles */
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 565px) {
   nav {
     display: flex;
     flex-direction: column;

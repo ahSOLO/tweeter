@@ -13,7 +13,7 @@
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 565px) {
   .main-header {
     height: 360px;
   }
