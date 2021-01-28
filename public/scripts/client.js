@@ -49,8 +49,8 @@ const displayErrorMsg = function(message) {
 const validateTweet = function (text, callback) {
   // Slide back prior error messages before validation
   $("section.sliding").slideUp( () => {
-    if (text) {
-      if (text.length <= 140) {
+    if (text.trim()) {
+      if (text.trim().length <= 140) {
         return callback();
       }
       return displayErrorMsg("Error! Your tweet is over 140 characters.");
@@ -84,7 +84,6 @@ $(function() {
 });
 
 // Load tweets via AJAX
-
 const loadTweets = function () {
   $.ajax({
     method: 'GET',
@@ -139,7 +138,6 @@ const topScroll = function() {
 $(() => {
   topScroll();
 });
-
 
 // Misc
 $(() => {
