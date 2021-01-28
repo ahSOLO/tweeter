@@ -31,3 +31,33 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+/* Smartphone Styles */
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 22px;
+  }
+
+  .responsive-container {
+    margin-top: 5em;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  .responsive-container {
+    margin-left: 4em;
+    margin-right: 4em;
+    justify-content: center;
+  }
+}

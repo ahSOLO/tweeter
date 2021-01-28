@@ -10,11 +10,11 @@ nav {
 
 nav .logo {
   font-family: 'Bungee', sans-serif;
-  font-size: 50px;
+  font-size: 2.25em;
 }
 
 nav .new {
-  font-size: 30px;
+  font-size: 1.25em;
 }
 
 nav .right-nav {
@@ -25,7 +25,7 @@ nav .right-nav {
 }
 
 nav .right-nav:hover {
-  font-size: 30px;
+  font-size: 1.1em;
   cursor: pointer;
 }
 
@@ -45,4 +45,27 @@ nav i {
 
 .bounce {
   animation: MoveUpDown 1s linear infinite;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 425px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav .logo {
+    font-size: 1.5em;
+  }
+
+  nav .new {
+    font-size: 1em;
+  }
+
+  nav .right-nav:hover {
+    font-size: 1em;
+  }
 }

@@ -26,6 +26,9 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/jquery.timeago.js"></script>
+    
+    <!-- Constrain viewport zoom -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
@@ -38,45 +41,49 @@
       </div>
     </nav>
 
-    <!-- Main Header -->
-    <header class="main-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <h2>Panyni Hamilgotin</h2>
-      </div>
-    </header>
+    <div class="responsive-container">
+      <!-- Main Header -->
+      <header class="main-header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <h2>Panyni Hamilgotin</h2>
+        </div>
+      </header>
+      
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="sliding">
+          <i class="red fas fa-exclamation-triangle"></i>
+          <p class="error"></p>
+          <i class="red fas fa-exclamation-triangle"></i>
+        </section>
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form action="/tweets/" method="POST">
+            <div class="form-top">
+              <label for="tweet-text"><b>What are you humming about?</b></label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="form-bottom">
+              <button id="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <br>
+        <section class="tweets">
+        </section>
+        <br>
+        <br>
+        <br>
+      </main>
+    </div>
 
     <!-- Back To Top Arrow -->
     <div class="to-top">
       <i class="fas fa-arrow-up"></i>
     </div>
-    
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="sliding">
-        <i class="red fas fa-exclamation-triangle"></i>
-        <p class="error"></p>
-        <i class="red fas fa-exclamation-triangle"></i>
-      </section>
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST">
-          <div class="form-top">
-            <label for="tweet-text"><b>What are you humming about?</b></label>
-            <textarea name="text" id="tweet-text"></textarea>
-          </div>
-          <div class="form-bottom">
-            <button id="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <br>
-      <section class="tweets">
-      </section>
-      <br>
-    </main>
   </body>
 </html>

@@ -3,11 +3,11 @@ div.to-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
-  right: 50px;
-  bottom: 50px;
+  font-size: 1.25em;
+  width: 2.1em;
+  height: 2.1em;
+  right: 2.1em;
+  bottom: 2.1em;
   background-color: red;
   color: white;
   opacity: 0.5;
@@ -16,9 +16,28 @@ div.to-top {
 
 div.to-top:hover {
   opacity: 1;
-  width: 60px;
-  height: 60px;
-  right: 45px;
-  bottom: 45px;
-  font-size: 35px;
+  width: 2.2em;
+  height: 2.2em;
+  right: 1.9em;
+  bottom: 1.9em;
+  font-size: 1.30em;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 425px) {
+  div.to-top {
+    width: 1.8em;
+    height: 1.8em;
+    right: 1.8em;
+    bottom: 1.8em;
+  }
+
+  div.to-top:hover {
+    width: 1.8em;
+    height: 1.8em;
+    right: 1.8em;
+    bottom: 1.8em;
+    font-size: 1.25em;
+  }
 }
