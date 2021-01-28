@@ -13,9 +13,11 @@
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 580px) {
   .main-header {
-    height: 360px;
+    height: 500px;
+    margin-top: 0px;
+    padding-top: 80px;
   }
 }
 
@@ -23,5 +25,7 @@
 @media only screen and (min-width: 768px) {
   .main-header {
     width: 35%;
+    margin-top: 1.5em;
+    height: 400px;
   }
 }

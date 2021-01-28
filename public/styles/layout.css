@@ -33,7 +33,7 @@ main {
 }
 
 /* Smartphone Styles */
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 580px) {
   body {
     font-size: 20px;
   }

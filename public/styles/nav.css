@@ -49,12 +49,13 @@ nav i {
 
 /* Mobile Styles */
 
-@media only screen and (max-width: 565px) {
+@media only screen and (max-width: 580px) {
   nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
   }
 
   nav .logo {
