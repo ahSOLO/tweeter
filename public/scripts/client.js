@@ -113,8 +113,9 @@ $(() => {
   })
   // Click handler
   .on("click", function(e) {
-    $("section.new-tweet").slideToggle(400)
-      .find("#tweet-text").focus();
+    $("section.new-tweet").slideToggle(400, function() {
+      $(this).find("#tweet-text").focus();
+    })
   });
 });
 
