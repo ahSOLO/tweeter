@@ -20,7 +20,7 @@ article.tweet:hover {
 
 article.tweet:hover .handle {
   color: #9993b2;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 article.tweet header {
@@ -45,7 +45,7 @@ article.tweet header .left span {
 }
 
 article.tweet header .handle {
-  color: transparent;  
+  color: #9993b2;  
 }
 
 article.tweet footer {
