@@ -1,9 +1,8 @@
-// Constants
-MAXCHAR = 140;
+const MAXCHAR = 140;
 
-$(document).ready(function() {
+$(function() {
   $(".new-tweet textarea").on('input', function() {
-    let counter = $(this).parent().next().children(".counter")
+    let counter = $(this).parent().next().children(".counter");
     counter.html(MAXCHAR - this.value.length);
     if (counter.html() < 0) {
       counter.removeClass("counterUnderLimit");
@@ -12,5 +11,5 @@ $(document).ready(function() {
       counter.removeClass("counterUnderLimit");
       counter.addClass("counterUnderLimit");
     }
-  })
+  });
 });
